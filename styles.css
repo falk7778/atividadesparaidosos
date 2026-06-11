@@ -219,8 +219,7 @@ body {
     gap: 15px;
     border: 1px solid rgba(22, 163, 74, 0.1);
     max-width: 100%;
-    flex-wrap: wrap;
-    justify-content: center;
+    text-align: left;
 }
 
 .author-badge-photo {
@@ -278,6 +277,28 @@ body {
     align-items: center;
     gap: 4px;
     border: 1px solid #dcfce7;
+}
+
+@media (max-width: 768px) {
+    .author-badge-hero {
+        flex-direction: column;
+        border-radius: 20px;
+        padding: 20px;
+        text-align: center;
+    }
+    
+    .author-badge-info {
+        align-items: center;
+        text-align: center;
+    }
+
+    .author-badge-desc {
+        text-align: center;
+    }
+
+    .author-badge-tags {
+        justify-content: center;
+    }
 }
 
 /* Video Container */
