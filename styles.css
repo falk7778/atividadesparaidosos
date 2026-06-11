@@ -730,67 +730,85 @@ body {
     gap: 10px;
 }
 
-/* Social Proof */
+/* Social Proof (WhatsApp Style) */
 .social-proof {
     padding: 5rem 0;
     background-color: var(--surface-color);
 }
 
-.testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.testimonial-card {
-    background: var(--background-color);
-    padding: 2.5rem;
+.whatsapp-chat {
+    background-color: #E5DDD5;
+    background-image: url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png');
+    padding: 2rem;
     border-radius: 16px;
-    box-shadow: var(--shadow-sm);
-    position: relative;
     display: flex;
     flex-direction: column;
+    gap: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: var(--shadow-md);
 }
 
-.testimonial-card::before {
-    content: '"';
+.wa-message {
+    background-color: #FFFFFF;
+    padding: 10px 15px 5px 15px;
+    border-radius: 0 8px 8px 8px;
+    position: relative;
+    max-width: 85%;
+    align-self: flex-start;
+    box-shadow: 0 1px 0.5px rgba(0,0,0,0.13);
+}
+
+.wa-message::before {
+    content: '';
     position: absolute;
-    top: 10px;
-    left: 20px;
-    font-size: 4rem;
-    color: var(--primary-light);
-    opacity: 0.2;
-    font-family: serif;
+    top: 0;
+    left: -10px;
+    width: 0;
+    height: 0;
+    border-top: 0px solid transparent;
+    border-right: 10px solid #FFFFFF;
+    border-bottom: 10px solid transparent;
 }
 
-.stars {
-    color: var(--secondary-color);
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+.wa-author {
+    color: #128C7E;
+    font-weight: bold;
+    font-size: 0.85rem;
+    margin-bottom: 3px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
-.testimonial-card p {
-    font-size: 1.125rem;
-    font-style: italic;
-    margin-bottom: 1.5rem;
-    color: var(--text-color);
-    flex-grow: 1;
+.wa-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
-.author-details {
-    border-top: 1px solid var(--border-color);
-    padding-top: 1rem;
+.wa-text {
+    color: #111111;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin-bottom: 5px;
 }
 
-.author {
-    font-weight: 700;
-    color: var(--primary-dark);
-    font-size: 1.1rem;
+.wa-time {
+    color: #999999;
+    font-size: 0.7rem;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 4px;
 }
 
-.author-role {
-    color: var(--text-muted);
-    font-size: 0.9rem;
+.wa-time span {
+    color: #34B7F1;
+    font-size: 0.8rem;
+    font-weight: bold;
 }
 
 /* Guarantee */
